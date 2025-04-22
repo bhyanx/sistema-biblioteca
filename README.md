@@ -45,11 +45,6 @@ cd sistema-biblioteca
 #### Opción A: Con XAMPP/WAMP
 
 - Copia el proyecto dentro de la carpeta `htdocs` o `www`.
-- Accede desde el navegador a:
-
-```
-http://localhost/sistema-biblioteca/public
-```
 
 ### 4. Iniciar sesión 🔐
 
