@@ -29,6 +29,10 @@ if ($segments[0] === 'admin') {
                 require_once 'controllers/admin/BookController.php';
                 break;
 
+            case 'Prestamos':
+                require_once 'controllers/admin/LoanController.php';
+                break;
+
             default:
                 http_response_code(404);
                 header("Content-Type: application/json; charset=UTF-8");
