@@ -14,8 +14,34 @@ $path = trim($path, '/');
 $segments = explode('/', $path);
 
 // Si la primera segmento es 'admin', cargar el controlador de administradores
+
+// si la ruta es admin, entonces que carge el controlador de administradores
+// pero podemos elegir mediante el case que mandamos por la url y traera de acuerdo a lo que se mande
 if ($segments[0] === 'admin') {
-    require_once 'controllers/admin/AdminController.php';
+
+    if (isset($segments[1])){
+        switch ($segments[1]){
+            case 'Administradores':
+                require_once 'controllers/admin/AdminController.php';
+                break;
+            
+            case 'Libros':
+                require_once 'controllers/admin/BookController.php';
+                break;
+
+            default:
+                http_response_code(404);
+                header("Content-Type: application/json; charset=UTF-8");
+                echo json_encode(['error' => 'Endpoint no encontrado']);
+                exit();
+        }
+    } else {
+        http_response_code(400);
+        header("Content-Type: application/json; charset=UTF-8");
+        echo json_encode(['error' => 'Debe especificar un endpoint']);
+        exit();
+    }
+
     exit();
 }
 

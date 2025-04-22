@@ -153,7 +153,7 @@ class AdministradorController
             $data = json_decode($rawInput);
 
             if ($data === null) {
-                throw new Exception('Invalid JSON data received');
+                throw new Exception('Error al decodificar JSON: ' . json_last_error_msg());
             }
 
             $this->administrador->id = $id;
@@ -171,7 +171,7 @@ class AdministradorController
                 echo json_encode($result);
             }
         } catch (Exception $e) {
-            error_log("Error updating product: " . $e->getMessage());
+            error_log("Error al actualizar el administrador: " . $e->getMessage());
             http_response_code(500);
             echo json_encode([
                 'status' => 'error',
