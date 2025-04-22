@@ -65,8 +65,14 @@ Puedes utilizar herramientas como [Postman](https://www.postman.com/) 📦 o `cu
 
 ### 1. Crear una nueva rama 🌿
 
+#### Rama para front-end
 ```bash
 git checkout -b feature/front-end
+```
+
+#### Rama para back-end
+```bash
+git checkout -b feature/back-end
 ```
 
 ### 2. Realiza tus cambios ✏️
@@ -82,8 +88,14 @@ git commit -m "Descripción clara de los cambios"
 
 ### 4. Sube tu rama 🚀
 
+#### Rama para front-end
 ```bash
 git push origin feature/front-end
+```
+
+#### Rama para back-end
+```bash
+git push origin feature/back-end
 ```
 
 ### 5. Crea un Pull Request 🔄
