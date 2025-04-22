@@ -1,0 +1,21 @@
+# Habilitar el módulo de reescritura
+RewriteEngine On
+
+# Habilitar CORS
+Header always set Access-Control-Allow-Origin "*"
+Header always set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+Header always set Access-Control-Allow-Headers "Content-Type, Authorization, X-Requested-With"
+Header always set Access-Control-Max-Age "3600"
+
+# Permitir métodos HTTP personalizados
+RewriteCond %{REQUEST_METHOD} ^(DELETE|PUT|OPTIONS) [NC]
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+# Para peticiones OPTIONS
+RewriteCond %{REQUEST_METHOD} OPTIONS
+RewriteRule ^(.*)$ $1 [R=200,L]
+
+# Redirigir todas las peticiones a la API
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/(.*)$ api/index.php [QSA,L]
