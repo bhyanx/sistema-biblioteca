@@ -40,24 +40,7 @@ cd sistema-biblioteca
 - Crea una base de datos llamada `sistema_biblioteca`.
 - Importa el archivo `database.sql` incluido en la carpeta del proyecto:
 
-```bash
-mysql -u root -p sistema_biblioteca < database.sql
-```
-
-### 3. Configurar la conexión a la base de datos 🔧
-
-Edita el archivo ubicado en `config/Database.php`:
-
-```php
-<?php
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'sistema_biblioteca');
-?>
-```
-
-### 4. Ejecutar el servidor local 🖥️
+### 3. Ejecutar el servidor local 🖥️
 
 #### Opción A: Con XAMPP/WAMP
 
@@ -68,16 +51,10 @@ define('DB_NAME', 'sistema_biblioteca');
 http://localhost/sistema-biblioteca/public
 ```
 
-#### Opción B: Usar servidor embebido de PHP
+### 4. Iniciar sesión 🔐
 
-```bash
-php -S localhost:8000 -t public/
-```
-
-### 5. Iniciar sesión 🔐
-
-- Usuario: `admin`
-- Contraseña: `admin123`
+- Usuario: `bhyanx@gmail.com`
+- Contraseña: `bhyanx`
 
 *(Puedes modificar estos datos directamente en la base de datos si lo deseas)*
 
@@ -89,20 +66,12 @@ Puedes utilizar herramientas como [Postman](https://www.postman.com/) 📦 o `cu
 
 ---
 
-## 📸 Capturas de pantalla
-
-| Página de inicio | Dashboard admin |
-|------------------|------------------|
-| ![Inicio](public/images/captura1.png) | ![Admin](public/images/captura2.png) |
-
----
-
 ## 👥 ¿Cómo colaborar?
 
 ### 1. Crear una nueva rama 🌿
 
 ```bash
-git checkout -b feature/tu-nueva-funcionalidad
+git checkout -b feature/front-end
 ```
 
 ### 2. Realiza tus cambios ✏️
@@ -119,13 +88,13 @@ git commit -m "Descripción clara de los cambios"
 ### 4. Sube tu rama 🚀
 
 ```bash
-git push origin feature/tu-nueva-funcionalidad
+git push origin feature/front-end
 ```
 
 ### 5. Crea un Pull Request 🔄
 
 - Ve al repositorio en GitHub.
-- Crea un **Pull Request** hacia la rama principal (`main` o `master`).
+- Crea un **Pull Request** hacia la rama principal (`master`).
 - Describe qué hiciste y por qué.
 
 ---
@@ -136,24 +105,7 @@ git push origin feature/tu-nueva-funcionalidad
 - 🔄 **Mantén tu rama actualizada**:
 
 ```bash
-git pull origin main
-```
-
----
-
-## 📌 Estructura del proyecto
-
-```
-sistema-biblioteca/
-│
-├── config/           # Configuración de base de datos y constantes
-├── controllers/      # Lógica del sistema (MVC)
-├── models/           # Consultas y conexión con la base de datos
-├── views/            # Archivos HTML/PHP del frontend
-├── public/           # Carpeta pública (acceso desde el navegador)
-├── uploads/          # Carpeta para archivos subidos (si aplica)
-├── database.sql      # Script SQL de la base de datos
-└── index.php         # Punto de entrada principal
+git pull origin master
 ```
 
 ---
@@ -162,8 +114,19 @@ sistema-biblioteca/
 
 Si tienes dudas, sugerencias o detectas errores, no dudes en escribirnos:
 
-- 📧 Email: bhyanxdev@gmail.com  
-- 🧑‍💻 Autor: Bryan Smick Sánchez García
+- 📧 Email: bhyanxdev@gmail.com
+
+### DESARROLLADORES
+
+## BACKEND
+- 🧑‍💻 Autor: Bryan Smick Sanchez Garcia
+- 🧑‍💻 Autor: Victor Adrian Alvarado Puescas
+- 🧑‍💻 Autor: Edgar Aldair Talledo Mego
+
+## FRONTEND
+- 🧑‍💻 Autor: Jean Pier Portella Ladines
+- 🧑‍💻 Autor: Hilary Rusbelinda Castillo Flores
+- 🧑‍💻 Autor: Leonardo Daniel Sanchez Agurto
 
 ---
 
